@@ -1,0 +1,48 @@
+@media screen and (max-width:600px)  {
+    * {
+        transition: all .5s ease-in;
+    }
+    .main-bg {
+        background-position: center bottom;
+    }
+    #header {
+        justify-content: flex-start;
+        padding-top: 50%;
+    }
+    #nav-side-bar {
+        --nav-bar-width: 100%;
+        z-index: 3;
+            
+    }
+    #nav-side-bar label  {
+    gap: 10px;
+
+    }
+    #main-links {
+        backdrop-filter: blur(90px);
+        background-color: rgba(0, 0, 0, 0.336);
+        height: 120%;
+        z-index: 1;
+      
+    }
+
+    #header-mid-ani {
+        --hs : 60px;
+        --ws : 230px;
+        letter-spacing: 3px;
+        --maincnt-fz : 10px
+    }
+    
+    #mySkillsAni {
+        width: 100%;
+        & ul {
+            width: 90%;
+            padding: 30px 0 0 0;
+
+        }
+        & ul li {
+            width: 100%;
+            --subcnt-fz : 10px
+        }
+    }
+}

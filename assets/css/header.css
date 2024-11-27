@@ -1,0 +1,381 @@
+/* Animasyonlu oldugu icin burasi karmasik oalcak o yuzden headeri ayri actim */
+
+#header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+
+}
+#nav-side-bar {
+    --nav-bar-width: 25%;
+    width: var(--nav-bar-width);
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    gap: 20px;
+
+    & input {
+        display: none;
+    }
+}
+
+#nav-side-bar label {
+    margin-left: auto;
+    width: fit-content;
+    position: relative;
+    z-index: 2;
+
+    font-size: calc(var(--links-fz) + 2px);
+    font-family: main-header;
+    cursor: pointer;
+    gap: 20px;
+
+    display: flex;
+    align-items: center;
+
+    & #spn-cnt {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 30px;
+        height: 30px;
+
+        & span {
+            width: 100%;
+            height: 1px;
+            background-color: aliceblue;
+            
+        }
+
+    }
+
+}
+
+#main-links {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    transition: transform .5s ease-in;
+    background-color: rgba(0, 0, 0, 0.308);
+    backdrop-filter: blur(6px);
+
+    & nav,ul {width: 100%; height: 100%;}
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 500px;
+        row-gap: 20px;
+        border-radius: 5px;
+
+        & li{
+        width: 70%; padding: 10px 0 10px 0 ;
+        text-align: center;
+        font-family: main-header;
+        font-size: var(--links-fz);
+        letter-spacing: 2px;
+        border-bottom: 2px solid aliceblue;
+        position: relative;
+            transition: all .2s ease-in-out;
+            overflow: hidden;
+        }
+
+        & li::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 70%;
+            height: 20%;
+            background-color: #ffffff85;
+            transform: skew(-30deg) translateX(-120%);
+            transition: all .5s ease-in-out;
+            backdrop-filter: blur(2px);
+            z-index: -2;
+
+
+        }
+        & li:hover::before {
+            transform: skew(-30deg) translateX(-20%);
+        }
+        & li:hover {
+            scale: 1.2;
+            border-bottom: 2px solid transparent;
+        }
+    }
+}
+
+#spn-cnt span {
+    transition: all .5s ease-in-out;
+    perspective: 900px;
+}
+& input:checked ~ #main-links {
+    transform: translateX(0);
+}
+
+& input:checked ~ label #spn-cnt span:nth-last-of-type(2) {
+    opacity: 0;
+
+}
+& input:checked ~ label #spn-cnt span:nth-last-of-type(1) {
+    transform: rotate(-40deg);
+    transform-origin: left;
+}
+& input:checked ~ label #spn-cnt span:nth-last-of-type(3) {
+    transform: rotate(40deg);
+    transform-origin: left;
+}
+
+
+
+
+#menu-bar
+ {
+    width: 400px;
+    height: 100vh;
+    background-color: saddlebrown;
+ }
+
+
+ /* orta kisim */
+
+#header-mid-ani {
+    --hs : 90px;
+    --ws : 350px;
+    width: var(--ws);
+    font-family: main-Header;
+    font-weight: 300 !important;
+    text-shadow: 5px 10px 1px black;
+    height: var(--hs);
+    font-size: calc(var(--maincnt-fz) + 3px);
+    letter-spacing: 8px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1%;
+        background-color: #ffff;
+        transform: translateX(-100%);
+        animation: left-ani .6s ease-in 1s forwards ;
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1%;
+        background-color: #ffff;
+        transform: translateX(100%);
+        animation: right-ani .6s ease-in 1s forwards ;
+    }
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes right-ani {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes left-ani {
+    0% {
+    transform: translateX(-100%);
+    }
+    100% {
+    transform: translateX(0%);
+    }
+}
+
+#sinan-ani-1 {
+    animation: sinan-ani 1s ease-in 1s  forwards;
+    opacity: 0;
+}
+@keyframes sinan-ani {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: .2;
+    }
+    50% {
+        opacity: .4;
+    }
+    75% {
+        opacity: .6;
+    }
+    100% {
+        scale: 1.1;
+        opacity: 1;
+    }
+    
+}
+.main-bg::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: bg-ani 3s ease-in 0s forwards ;
+}
+@keyframes bg-ani {
+    0% {
+        background-color: #6b383e;
+    }
+    25% {
+        background-color: #6b383e;
+
+    }
+    50% {
+        background-color: #6b383e;
+
+    }
+
+    75% {
+        background-color: #6b383e;
+
+    }
+
+    100% {
+        background-color: #6b383e00;
+    }
+}
+
+
+#mySkillsAni
+{
+    width: 50%;
+    text-transform: capitalize;
+    & ul {
+        width:100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;        
+        column-gap: 5px;
+        padding: 40px 0 0 0;
+        & li {
+            font-size: calc(var(--subcnt-fz) + 10px);
+            font-family: header-2;
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    animation: mySkills-ani 3.7s ease-in 0s forwards ;
+
+}
+@keyframes mySkills-ani {
+    0% {
+        opacity: 0;
+    }
+    25% {
+        opacity: 0;
+
+    }
+    50% {
+        opacity: 0;
+
+
+    }
+
+    75% {
+        opacity: 0;
+
+
+    }
+
+    100% {
+        opacity: 1;
+
+    }
+    
+}
+#learn-more-ani { 
+    position: absolute;
+    bottom: 5px;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+
+}
+#learn-more-ani a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    text-transform: uppercase;
+    font-family: content;
+    animation: learn-more-ani 0.5s forwards ease-in 4s ;
+    transform: translateY(300%);
+
+   
+}
+@keyframes learn-more-ani {
+    0% {
+        transform: translateY(300%);
+    }
+    100% {
+        transform: translateY(0%);
+             
+        
+    }
+    
+    
+}
+#learn-more-ani a:hover i {
+        animation-play-state: running;
+}
+#learn-more-ani i {
+    display: block;
+    width: 100px;
+    text-align: center;
+
+    animation-name: arrow;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+
+   
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(10px);
+    }
+
+}
+ /* orta kisim */

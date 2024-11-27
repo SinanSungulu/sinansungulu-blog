@@ -1,0 +1,31 @@
+/* font - family */
+@font-face {
+    font-family: main-Header;
+    src: url(../fonts/Sono-mnH/static/Sono_Proportional-Medium.ttf);
+}
+@font-face {
+    font-family: header-2;
+    src: url(../fonts/Ephesis-h/Ephesis-Regular.ttf);
+}
+@font-face {
+    font-family: content;
+    src: url(../fonts/Jura-cnt/Jura-VariableFont_wght.ttf);
+}
+/* font - family */
+
+
+:root {
+    /* colors */
+    --sub-content-color: #8e9194;
+    --content-color: #ffffff;
+    /* colors */
+
+    /* font size */
+    --maincnt-fz:20px;
+    --subcnt-fz: 19px;
+    --links-fz: 18px;
+    /* font size */
+
+}
+
+
