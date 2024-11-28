@@ -1,2 +1,5 @@
 assets\img\my.jpg
 # ! koyara harici bir dosyayi gondere bilirisn * koyum hepsi ama hepsinin icniden !ile ayirtabilriisn
+# git rm --cached assets/img/my.jpg => bu islem dosyayi takibini biraktiri
+# git commit -m "Add my.jpg to .gitignore"
+# git push
