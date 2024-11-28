@@ -1,0 +1,23 @@
+@media screen and (max-width:600px) {
+    #page-2 img {
+        --img-w : 250px;
+        --img-h : 200px;
+    }
+    h2 {
+        padding: 30px 0;
+    }
+    #mid-p-1 {
+        --maincnt-fz : var(--maincnt-fz);
+    }
+    .space {
+        height: 100px;
+    }
+    #mid-p-2 {
+        font-size: calc(var(--subcnt-fz) - 3px);
+    }
+    #article span {
+        --maincnt-fz : 20px;
+        width: 90%;
+
+    }
+}

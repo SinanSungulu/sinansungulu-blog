@@ -19,6 +19,7 @@
     right: 0;
     top: 0;
     gap: 20px;
+    z-index: 3;
 
     & input {
         display: none;
@@ -155,23 +156,26 @@
     width: var(--ws);
     font-family: main-Header;
     font-weight: 300 !important;
-    text-shadow: 5px 10px 1px black;
     height: var(--hs);
     font-size: calc(var(--maincnt-fz) + 3px);
     letter-spacing: 8px;
     position: relative;
     overflow: hidden;
 
+    animation: txtShadow .4s ease-in 3s forwards  ;
+
+
     &::before {
         content: "";
         position: absolute;
+        z-index: 2;
         top: 0;
         left: 0;
         width: 100%;
         height: 1%;
         background-color: #ffff;
         transform: translateX(-100%);
-        animation: left-ani .6s ease-in 1s forwards ;
+        animation: left-ani .7s ease-in 0.5s forwards ;
     }
 
 
@@ -184,17 +188,29 @@
         height: 1%;
         background-color: #ffff;
         transform: translateX(100%);
-        animation: right-ani .6s ease-in 1s forwards ;
+        z-index: 2;
+        animation: right-ani .7s ease-in 0.5s forwards ;
     }
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+@keyframes txtShadow {
+    0% {
+        text-shadow: 5px 10px 1px transparent;
+    }
+    100% {
+        text-shadow: 5px 10px 1px black;
+
+    }
+    
+}
 
 @keyframes right-ani {
     0% {
         transform: translateX(100%);
+        
     }
     100% {
         transform: translateX(0);
@@ -210,7 +226,9 @@
 }
 
 #sinan-ani-1 {
-    animation: sinan-ani 1s ease-in 1s  forwards;
+    animation: sinan-ani .7s ease-in .1s  forwards;
+    position: relative;
+    z-index: 2;
     opacity: 0;
 }
 @keyframes sinan-ani {
@@ -229,17 +247,18 @@
     100% {
         scale: 1.1;
         opacity: 1;
+
     }
     
 }
-.main-bg::after {
+#header::after {
     position: absolute;
     content: "";
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    animation: bg-ani 3s ease-in 0s forwards ;
+    animation: bg-ani 2s ease-in 0s forwards ;
 }
 @keyframes bg-ani {
     0% {
@@ -255,7 +274,7 @@
     }
 
     75% {
-        background-color: #6b383e;
+        background-color: #6b383ec5;
 
     }
 
@@ -284,7 +303,7 @@
         }
     }
 
-    animation: mySkills-ani 3.7s ease-in 0s forwards ;
+    animation: mySkills-ani 3s ease-in 0s forwards ;
 
 }
 @keyframes mySkills-ani {
@@ -319,6 +338,7 @@
     width: 150px;
     height: 100px;
     overflow: hidden;
+    z-index: 3;
 
 }
 #learn-more-ani a{
@@ -328,7 +348,7 @@
     row-gap: 5px;
     text-transform: uppercase;
     font-family: content;
-    animation: learn-more-ani 0.5s forwards ease-in 4s ;
+    animation: learn-more-ani 0.5s forwards ease-in 3s ;
     transform: translateY(300%);
 
    

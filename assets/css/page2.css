@@ -1,0 +1,141 @@
+p{
+    font-family: content;
+}
+h2 {
+    font-family: main-Header;
+    letter-spacing: 3px;
+    font-weight: 200;
+    word-spacing: 2px;
+    word-break: break-all;
+}
+#page-2 {
+    width: 100%;
+    background-color: #1d2533;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    padding: 50px 0;
+}
+#page-2 img {
+    --img-w : 400px;
+    --img-h : 300px;
+    display: block;
+    width: var(--img-w);
+    height: var(--img-h);
+    object-fit: cover;
+    object-position: center;
+    margin: 0 auto;
+}
+.mid-div {
+    padding: 10px;
+}
+#mid-p-1 {
+    font-size: calc(var(--maincnt-fz) + 3px);
+    border-bottom: 1px solid aliceblue;
+    width: fit-content;
+    margin: 0 auto;
+    & p {
+        padding: 20px;
+    }
+}
+
+.loadingDot {
+    font-size: calc( var(--maincnt-fz) + 25px);
+    color:#783d43 ;
+
+    /* animation: loadingDot 3s linear .2s infinite  ; */
+}
+.loadingDot:nth-of-type(1) {
+    display: inline-block;
+    animation: firstDot 1s linear 1s infinite  ;
+
+}
+.loadingDot:nth-of-type(2) {
+    display: inline-block;
+    animation: secDot 1s linear 1s infinite  ;
+    
+}
+.loadingDot:nth-of-type(3) {
+    display: inline-block;
+    animation: thrdDot 1s linear 1s infinite  ;
+    
+}
+@keyframes firstDot {
+    0% {
+     transform: translateY(-5px);
+
+    }
+    25%{
+        transform: translateY(-2px);
+
+    }
+    50%{
+     transform: translateY(-0);
+
+    }
+    75%{
+     transform: translateY(-2px);
+
+    }
+    100%{
+     transform: translateY(-5px);
+
+    }
+}
+
+@keyframes secDot {
+    0% {
+     transform: translateY(-6px);
+
+    }
+    25%{
+        transform: translateY(-2px);
+
+    }
+    50%{ 
+     transform: translateY(-0px);
+
+    }
+    75%{
+     transform: translateY(-5px);
+
+    }
+    100%{
+     transform: translateY(-6px);
+
+    }
+}
+
+@keyframes thrdDot {
+    0% {
+     transform: translateY(-10px);
+    }
+    25%{
+        transform: translateY(-5px);
+
+    }
+    50%{
+     transform: translateY(0px);
+
+    }
+    75%{
+     transform: translateY(-5px);
+
+    }
+    100%{
+     transform: translateY(-10px);
+
+    }
+}
+
+#mid-p-2 {
+    font-size: var(--maincnt-fz);
+    & p {
+        padding: 10px 0;
+    }
+}
+#mid-foot {
+    font-size: var(--subcnt-fz);
+    padding-bottom: 50px;
+}

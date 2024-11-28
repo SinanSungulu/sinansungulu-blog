@@ -23,4 +23,5 @@ Hi, my name is Sinan! If you're reading this, it means you've checked out my cod
 
 [My Instagram](https://www.instagram.com/sinan.sngl/)
 
+
 This site is a project I'm working on to reinforce what I've learned so far, and I plan to keep improving it. I focused especially on making it responsive, but I'm still at the beginning of my journey. There's more to come...
