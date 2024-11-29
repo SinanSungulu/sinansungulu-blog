@@ -30,7 +30,7 @@
         --hs : 60px;
         --ws : 230px;
         letter-spacing: 3px;
-        --maincnt-fz : 10px
+        --maincnt-fz : 16px
     }
     
     #mySkillsAni {
@@ -42,7 +42,8 @@
         }
         & ul li {
             width: 100%;
-            --subcnt-fz : 10px
+            --subcnt-fz : 15px;
+            text-align: center;
         }
     }
 }
