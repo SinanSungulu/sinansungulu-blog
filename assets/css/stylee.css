@@ -1,0 +1,20 @@
+.main-bg {
+    position: fixed;
+    background: url(../img/bg2.jpeg);
+    background-position: 100% 100%;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -4;
+   
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.452);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+    }
+}
